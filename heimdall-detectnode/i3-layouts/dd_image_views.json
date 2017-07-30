@@ -1,0 +1,172 @@
+// vim:ts=4:sw=4:et
+{
+    // splith split container with 5 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": 1,
+    "type": "con",
+    "nodes": [
+        {
+            // splitv split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "percent": 0.2,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 240,
+                       "width": 320,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "/camera/rgb/image_raw",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                         "class": "^Image_raw$",
+                         "instance": "^image_raw$",
+                         "title": "^\\/camera\\/rgb\\/image_raw$",
+                         "transient_for": "^$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            // splitv split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "percent": 0.2,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 240,
+                       "width": 320,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "/camera/depth/image",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                         "class": "^Image$",
+                         "instance": "^image$",
+                         "title": "^\\/camera\\/depth\\/image$",
+                         "transient_for": "^$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            // splitv split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "percent": 0.2,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 240,
+                       "width": 320,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "/dd/visual/rgb_dev",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                         "class": "^Rgb_dev$",
+                         "instance": "^rgb_dev$",
+                         "title": "^\\/dd\\/visual\\/rgb_dev$",
+                         "transient_for": "^$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            // splitv split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "percent": 0.2,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 240,
+                       "width": 320,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "/dd/visual/depth_dev",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                         "class": "^Depth_dev$",
+                         "instance": "^depth_dev$",
+                         "title": "^\\/dd\\/visual\\/depth_dev$",
+                         "transient_for": "^$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            // splitv split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "percent": 0.2,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 240,
+                       "width": 320,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "/dd/visual/cc",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                         "class": "^Cc$",
+                         "instance": "^cc$",
+                         "title": "^\\/dd\\/visual\\/cc$",
+                         "transient_for": "^$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+

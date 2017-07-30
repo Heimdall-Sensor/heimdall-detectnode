@@ -1,0 +1,6 @@
+# Heimdall Detect Node
+
+The Detect Node grabs images from OpenNI through ros and analyzes them. It works with masks and a bunch of parameters
+to detect where activity occurs and what kind of activity this is.
+
+It is licensed under the AGPL-3.0: https://www.gnu.org/licenses/agpl-3.0.en.html

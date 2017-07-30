@@ -1,0 +1,59 @@
+#include <string>
+#include <heimdall_detectnode/detect_node.h>
+#include <heimdall_detectnode/dd.h>
+#include <heimdall_detectnode/mask.h>
+
+#include <ros/ros.h>
+#include <image_transport/image_transport.h>
+#include <cv_bridge/cv_bridge.h>
+#include <sensor_msgs/image_encodings.h>
+#include <ros/package.h>
+
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
+
+#include <std_msgs/UInt64.h>
+#include <std_msgs/Bool.h>
+#include <std_msgs/Float64.h>
+
+#include <heimdall_msgs/PolygonArray.h>
+#include <geometry_msgs/Polygon.h>
+#include <geometry_msgs/Point32.h>
+
+#include <dynamic_reconfigure/server.h>
+#include <heimdall_detectnode/DetectNodeConfig.h>
+
+#include <heimdall_msgs/CommandSrv.h>
+#include <heimdall_msgs/AddMaskSrv.h>
+#include <heimdall_msgs/GetMaskSrv.h>
+#include <heimdall_msgs/GetMaskListSrv.h>
+#include <heimdall_msgs/RemoveMaskListSrv.h>
+
+#include <heimdall_msgs/Activity.h>
+#include <heimdall_msgs/ActivityArray.h>
+#include <heimdall_msgs/ActivityArrayStamped.h>
+
+#include <heimdall_msgs/Masks.h>
+#include <std_msgs/String.h>
+
+#include <boost/format.hpp>
+
+#include <boost/filesystem.hpp>
+#include <boost/foreach.hpp> 
+
+#include <pcl/search/search.h>
+#include <pcl/search/kdtree.h>
+#include <pcl/features/normal_3d.h>
+#include <pcl/filters/passthrough.h>
+
+#include <pcl/conversions.h>
+
+#include <sensor_msgs/PointCloud2.h>
+#include <pcl/filters/extract_indices.h>
+
+#include <thread>
+
+#include <visualization_msgs/Marker.h>
+
+using namespace std;
+namespace fs = boost::filesystem; 

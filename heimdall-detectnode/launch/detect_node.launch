@@ -1,0 +1,48 @@
+<launch>
+    <node name="detect_node" pkg="heimdall_detectnode" type="detect_node" args="points:=/camera/depth/points" output="screen">
+        <!-- Enable/disable (old) modules: -->
+        <param name="enable_depth"          type="bool" value="false" />
+        <param name="enable_rgb"            type="bool" value="false" />
+        <param name="enable_pcl"            type="bool" value="true" />
+        <param name="enable_visualization"  type="bool" value="false" />
+
+        <param name="enable_debug_points"   type="bool" value="true" />
+
+        <param name="calibration_period"    type="double" value="10.0" />
+
+        <!-- PCL Detection Configuration: -->
+        <param name="mask_bed_ub"    type="double" value=" 0.02" />
+        <param name="mask_bed_lb"    type="double" value=" 0.01" />
+        <param name="mask_bed_min"   type="double" value=" 0.05" />
+        <param name="mask_bed_max"   type="double" value=" 0.35" />
+
+        <param name="mask_mani_ub"   type="double" value=" 0.10" />
+        <param name="mask_mani_lb"   type="double" value=" 0.05" />
+        <param name="mask_mani_min"  type="double" value="-0.10" />
+        <param name="mask_mani_max"  type="double" value=" 0.10" />
+
+        <param name="mask_chair_ub"  type="double" value=" 0.03" />
+        <param name="mask_chair_lb"  type="double" value=" 0.01" />
+        <param name="mask_chair_min" type="double" value=" 0.02" />
+        <param name="mask_chair_max" type="double" value=" 0.70" />
+
+        <param name="mask_floor_ub"  type="double" value=" 0.10" />
+        <param name="mask_floor_lb"  type="double" value=" 0.07" />
+        <param name="mask_floor_min" type="double" value=" 0.10" />
+        <param name="mask_floor_max" type="double" value=" 0.30" />
+
+        <param name="mask_door_ub"   type="double" value=" 0.03" />
+        <param name="mask_door_lb"   type="double" value="-0.03" />
+        <param name="mask_door_min"  type="double" value="-0.80" />
+        <param name="mask_door_max"  type="double" value=" 0.80" />
+
+        <!-- Old configuration (based on RGB/Depth Deviation Detection): -->
+        <param name="dilate_size" type="int" value="1" />
+        <param name="erode_size"  type="int" value="3" />
+        <param name="cc_size_threshold"         type="double" value=" 10.0" />
+        <param name="rgb_dev_threshold"         type="double" value="100.0" />
+        <param name="depth_dev_threshold"       type="double" value="  0.1" />
+        <param name="motion_duration"           type="double" value="  1.5" />
+        <param name="mask_distance_threshold"   type="double" value="300.0" />
+    </node>
+</launch>

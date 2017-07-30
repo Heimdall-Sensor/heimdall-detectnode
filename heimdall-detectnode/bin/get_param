@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+rosrun dynamic_reconfigure dynparam get /detect_node $@

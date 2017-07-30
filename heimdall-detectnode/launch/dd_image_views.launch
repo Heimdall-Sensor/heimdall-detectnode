@@ -1,0 +1,11 @@
+<launch>
+    <!-- start visualization of dd_node -->
+    <node name="dd_image_view_rgb"              pkg="image_view" type="image_view" args="image:=/camera/rgb/image_raw" />
+    <node name="dd_image_view_depth"            pkg="image_view" type="image_view" args="image:=/camera/depth/image" />
+    <node name="dd_image_view_rgb_dev"          pkg="image_view" type="image_view" args="image:=/dd/visual/rgb_dev" />
+    <node name="dd_image_view_depth_dev"        pkg="image_view" type="image_view" args="image:=/dd/visual/depth_dev" />
+    <node name="dd_image_view_rgb_motion_dev"   pkg="image_view" type="image_view" args="image:=/dd/visual/rgb_motion_dev" />
+    <node name="dd_image_view_depth_motion_dev" pkg="image_view" type="image_view" args="image:=/dd/visual/depth_motion_dev" />
+    <node name="dd_image_view_cc"               pkg="image_view" type="image_view" args="image:=/dd/visual/cc" />
+    <node name="dd_image_view_cc_motion"        pkg="image_view" type="image_view" args="image:=/dd/visual/cc_motion" />
+</launch>
